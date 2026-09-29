@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="NFL Prediction Lab — weekly picks, projected scores, and an honest season record.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; object-src 'none'">
+<title>NFL Prediction Lab</title><link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+</head>
+<body>
+<header><a class="brand" href="./" aria-label="NFL Prediction Lab home"><span class="brand-icon">N<span>↑</span></span><span>NFL <b>PREDICTION LAB</b><small>THE PICKS. THE SCORES. THE RECORD.</small></span></a><span class="edition">DENNIS'S FOOTBALL LAB <i>•</i> <span id="seasonLabel">SEASON</span></span></header>
+<main>
+<div class="hero"><div><p class="eyebrow">WEEKLY INTELLIGENCE / SEASON TRACKER</p><h1>Every pick.<br><span>On the record.</span></h1><p class="intro">A clear view of the week's predictions—and how they actually played out.</p></div><div class="hero-mark" aria-hidden="true"><span>01—18</span><div class="field"><i></i><i></i><i></i><b>NFL<br>LAB</b><i></i><i></i><i></i></div><small>BUILT FOR SUNDAY. TRACKED ALL SEASON.</small></div></div>
+<div class="status-bar"><span><span class="dot"></span> PUBLISHED RESULTS <span id="updated">Loading…</span></span><button id="refresh" type="button">Refresh results ↻</button></div>
+<p id="error" role="alert" hidden></p>
+<section class="metrics" aria-label="Season record"><article><span>ALL PUBLISHED PICKS</span><strong id="allRecord">—</strong><small id="allCaption">Loading season record</small></article><article class="highlight"><span>PREGAME RECORD</span><strong id="pregameRecord">—</strong><small id="pregameCaption">Saved before the games</small></article><article><span>OVERALL HIT RATE</span><strong id="accuracy">—</strong><small>Includes retrospective weeks</small></article><article><span>WEEKS PUBLISHED</span><strong id="weekCount">—</strong><small id="pending">—</small></article></section>
+<nav class="tabs" aria-label="Dashboard views"><button id="picksTab" class="active" aria-pressed="true">Weekly picks</button><button id="recordTab" aria-pressed="false">Season record</button></nav>
+<section id="picksView"><div class="section-heading"><div><p class="eyebrow" id="weekEyebrow">THE MATCHUPS</p><h2 id="weekHeading">Weekly picks</h2></div><div class="selectors"><label>Season<select id="season"></select></label><label>Week<select id="week"></select></label></div></div>
+<div class="week-summary"><span id="weekSource"></span><b id="weekRecord"></b></div><p class="note" id="provenanceNote"></p>
+<div class="toolbar"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search a team…" aria-label="Search teams"></label><label class="filter-label">Show<select id="outcome"><option value="all">All results</option><option value="win">Correct picks</option><option value="loss">Missed picks</option><option value="pending">Pending</option></select></label><button id="download" class="quiet">Download picks ↓</button></div>
+<div id="matchups" class="matchups" aria-live="polite"></div><p id="empty" class="empty" hidden>No matchups match your filters.</p></section>
+<section id="recordView" hidden><div class="section-heading"><div><p class="eyebrow">THE FULL PICTURE</p><h2>Season record</h2></div></div><p class="note">Pregame snapshots and retrospective runs are shown separately. A retrospective run is not evidence of a prediction made before kickoff.</p><div class="table-wrap"><table><thead><tr><th>Week</th><th>Record</th><th>Hit rate</th><th>Pending</th><th>Pick history</th></tr></thead><tbody id="recordRows"></tbody></table></div></section>
+<footer><span><b>NFL PREDICTION LAB</b><br>Published picks stay fixed. Final scores update separately.</span><span id="checked">Score refresh status loading…</span></footer>
+</main>
+</body></html>
