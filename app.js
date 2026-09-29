@@ -13,7 +13,7 @@ function current(){return weeks().find(w=>w.week===selectedWeek);}
 function view(which){$('picksView').hidden=which!=='picks';$('recordView').hidden=which!=='record';for(const v of ['picks','record']){ $(v+'Tab').classList.toggle('active',v===which);$(v+'Tab').setAttribute('aria-pressed',String(v===which));}}
 function render(){
  const ws=weeks(),all=record(ws.flatMap(w=>w.games)),pregame=record(ws.filter(w=>w.provenance!=='retrospective').flatMap(w=>w.games));
- $('seasonLabel').textContent=selectedSeason+' SEASON';$('allRecord').textContent=recordText(all);$('allCaption').textContent='Mixed history · see week labels';$('pregameRecord').textContent=recordText(pregame);$('pregameCaption').textContent=`${pregame.wins+pregame.losses+pregame.ties} graded pregame picks`;$('accuracy').textContent=all.accuracy===null?'—':fmt(all.accuracy)+'%';$('weekCount').textContent=String(ws.length).padStart(2,'0');$('pending').textContent=all.pending+' picks awaiting a final';
+ $('seasonLabel').textContent=selectedSeason+' SEASON';$('allRecord').textContent=recordText(all);$('allCaption').textContent=ws.some(w=>w.provenance==='retrospective')?'Mixed history · see week labels':'Pregame predictions';$('pregameRecord').textContent=recordText(pregame);$('pregameCaption').textContent=`${pregame.wins+pregame.losses+pregame.ties} graded pregame picks`;$('accuracy').textContent=all.accuracy===null?'—':fmt(all.accuracy)+'%';$('weekCount').textContent=String(ws.length).padStart(2,'0');$('pending').textContent=all.pending+' picks awaiting a final';
  $('week').innerHTML=ws.slice().reverse().map(w=>`<option value="${w.week}">Week ${w.week}</option>`).join('');$('week').value=selectedWeek;
  $('updated').textContent='Updated '+date(payload.generated_at);
  $('checked').textContent=payload.scores_checked_at?'Final scores checked '+date(payload.scores_checked_at)+'. This page checks for updates every minute.':'Initial archive · imported final scores. Automatic score refresh is not connected yet.';
@@ -24,7 +24,7 @@ function render(){
 function renderGames(){
  const w=current();if(!w)return;const rec=record(w.games);
  $('weekHeading').textContent=`Week ${w.week} picks`;$('weekEyebrow').textContent=`${w.season} SEASON / ${w.games.length} MATCHUPS`;$('weekSource').textContent=w.provenance==='retrospective'?'Retrospective run':'Pregame snapshot';$('weekRecord').textContent=`${recordText(rec)} · ${rec.accuracy===null?'Not graded':fmt(rec.accuracy)+'% correct'}`;
- $('provenanceNote').textContent=w.provenance==='retrospective'?'These picks were recreated after the games. They count in the combined record, but are excluded from the pregame record.':`Saved ${date(w.captured_at)}. Published picks are preserved; final scores are tracked separately.`;
+ $('provenanceNote').textContent=w.provenance==='retrospective'?'These picks were recreated after the games. They count in the combined record, but are excluded from the pregame record.':`Imported snapshot. Published picks are preserved; final scores are tracked separately.`;
  const q=$('search').value.trim().toLowerCase(),filter=$('outcome').value;
  const games=w.games.filter(g=>(g.away+' '+g.home+' '+names[g.away]+' '+names[g.home]).toLowerCase().includes(q)&&(filter==='all'||result(g)===filter));
  $('empty').hidden=games.length>0;
