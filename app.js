@@ -10,7 +10,7 @@ function record(games){let wins=0,losses=0,pending=0,ties=0;for(const g of games
 const recordText=r=>`${r.wins}–${r.losses}${r.ties?`–${r.ties}`:''}`;
 function weeks(){return payload.weeks.filter(w=>w.season===selectedSeason);}
 function current(){return weeks().find(w=>w.week===selectedWeek);}
-function view(which){$('picksView').hidden=which!=='picks';$('recordView').hidden=which!=='record';for(const v of ['picks','record']){ $(v+'Tab').classList.toggle('active',v===which);$(v+'Tab').setAttribute('aria-pressed',String(v===which));}}
+function view(which){for(const v of ['picks','record','elo']){$(v+'View').hidden=v!==which; $(v+'Tab').classList.toggle('active',v===which);$(v+'Tab').setAttribute('aria-pressed',String(v===which));}}
 function render(){
  const ws=weeks(),all=record(ws.flatMap(w=>w.games)),pregame=record(ws.filter(w=>w.provenance!=='retrospective').flatMap(w=>w.games));
  $('seasonLabel').textContent=selectedSeason+' SEASON';$('allRecord').textContent=recordText(all);$('allCaption').textContent=ws.some(w=>w.provenance==='retrospective')?'Mixed history · see week labels':'Pregame predictions';$('pregameRecord').textContent=recordText(pregame);$('pregameCaption').textContent=`${pregame.wins+pregame.losses+pregame.ties} graded pregame picks`;$('accuracy').textContent=all.accuracy===null?'—':fmt(all.accuracy)+'%';$('weekCount').textContent=String(ws.length).padStart(2,'0');$('pending').textContent=all.pending+' picks awaiting a final';
@@ -34,8 +34,47 @@ async function load(){
  $('refresh').disabled=true;
  try{const res=await fetch('results.json',{cache:'no-store'});if(!res.ok)throw new Error(`HTTP ${res.status}`);const next=await res.json();if(next.schema_version!==1||!Array.isArray(next.weeks)||!next.weeks.length)throw new Error('Invalid results');payload=next;const seasons=[...new Set(payload.weeks.map(w=>w.season))].sort((a,b)=>b-a);if(!seasons.includes(selectedSeason))selectedSeason=seasons[0];if(!weeks().some(w=>w.week===selectedWeek))selectedWeek=Math.max(...weeks().map(w=>w.week));$('season').innerHTML=seasons.map(s=>`<option value="${s}">${s}</option>`).join('');$('season').value=selectedSeason;$('error').hidden=true;render();}
  catch(e){$('error').textContent=payload?'Could not refresh. Showing the last loaded results; try again shortly.':'Results could not load. Please try Refresh results.';$('error').hidden=false;}
- finally{$('refresh').disabled=false;}
+ finally{await loadElo();$('refresh').disabled=false;}
 }
 $('refresh').onclick=load;$('picksTab').onclick=()=>view('picks');$('recordTab').onclick=()=>view('record');$('search').oninput=renderGames;$('outcome').onchange=renderGames;$('week').onchange=()=>{selectedWeek=Number($('week').value);renderGames();};$('season').onchange=()=>{selectedSeason=Number($('season').value);selectedWeek=Math.max(...weeks().map(w=>w.week));render();};
 $('download').onclick=()=>{const w=current();if(!w)return;const columns=['away','home','pick','away_score','home_score','confidence','actual_away','actual_home','actual_winner'];const csv=[columns.join(','),...w.games.map(g=>columns.map(k=>`"${String(g[k]??'').replace(/"/g,'""')}"`).join(','))].join('\r\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));const link=document.createElement('a');link.href=url;link.download=`NFL_${w.season}_Week_${w.week}_picks.csv`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+let eloPayload=null, eloSeason=null, eloWeek=null;
+function eloWeeks(){return eloPayload.weeks.filter(w=>w.season===eloSeason);}
+function changeCell(n,position=false){
+ if(n===null||!Number.isFinite(n))return '<td>—</td>';
+ const value=position?n:Number(n.toFixed(1));
+ if(value===0)return '<td class="elo-neutral">0</td>';
+ const label=position?(value>0?'Up ':'Down ')+Math.abs(value)+' positions':(value>0?'Increase ':'Decrease ')+Math.abs(value)+' rating points';
+ return `<td class="${value>0?'elo-up':'elo-down'}" aria-label="${label}">${position?(value>0?'↑ ':'↓ '):(value>0?'+':'−')}${fmt(Math.abs(value))}</td>`;
+}
+function renderElo(){
+ if(!eloPayload)return;
+ const ws=eloWeeks();
+ $('eloWeek').innerHTML=ws.slice().sort((a,b)=>b.week-a.week).map(w=>`<option value="${w.week}">Week ${w.week}</option>`).join('');$('eloWeek').value=eloWeek;
+ const snapshot=ws.find(w=>w.week===eloWeek),q=$('eloSearch').value.trim().toLowerCase(),sort=$('eloSort').value;
+ $('eloHeading').textContent=`Week ${eloWeek} Elo rankings`;
+ const rows=(snapshot?.teams||[]).filter(r=>(r.team+' '+names[r.team]).toLowerCase().includes(q)).slice().sort((a,b)=>a[sort].rank-b[sort].rank);
+ $('eloRows').innerHTML=rows.map(r=>`<tr><td><strong>${esc(r.team)}</strong><small>${esc(names[r.team])}</small></td>`+['raw','network'].map(k=>`<td>${r[k].rank}</td><td>${fmt(r[k].rating)}</td>`+changeCell(r[k].rating_change)+changeCell(r[k].position_change,true)).join('')+'</tr>').join('');
+ $('eloEmpty').hidden=rows.length>0;
+ $('eloSource').textContent=snapshot?`${snapshot.season} · Entering Week ${snapshot.week}. Ratings use only earlier games. ${snapshot.reconstructed?'Historical rankings reconstructed from the model; pick history is unchanged.':'Saved weekly rating snapshot.'}`:'';
+}
+async function loadElo(){
+ try{
+  const res=await fetch('elo.json',{cache:'no-store'});if(!res.ok)throw Error('Ratings unavailable');
+  const next=await res.json();
+  if(next.schema_version!==1||!Array.isArray(next.weeks)||!next.weeks.length)throw Error('Invalid ratings');
+  for(const w of next.weeks){
+   if(!Number.isInteger(w.season)||!Number.isInteger(w.week)||!Array.isArray(w.teams)||w.teams.length!==32||new Set(w.teams.map(r=>r.team)).size!==32)throw Error('Incomplete ratings');
+   for(const r of w.teams){if(!Object.hasOwn(names,r.team))throw Error('Invalid team');for(const k of ['raw','network']){const x=r[k];if(!x||!Number.isInteger(x.rank)||x.rank<1||x.rank>32||!Number.isFinite(x.rating)||![x.rating_change,x.position_change].every(v=>v===null||Number.isFinite(v)))throw Error('Invalid rating');}}
+  }
+  eloPayload=next;const seasons=[...new Set(next.weeks.map(w=>w.season))].sort((a,b)=>b-a);
+  if(!seasons.includes(eloSeason))eloSeason=seasons[0];if(!eloWeeks().some(w=>w.week===eloWeek))eloWeek=Math.max(...eloWeeks().map(w=>w.week));
+  $('eloSeason').innerHTML=seasons.map(s=>`<option value="${s}">${s}</option>`).join('');$('eloSeason').value=eloSeason;
+  $('eloError').hidden=true;renderElo();
+ }catch(e){$('eloError').textContent=eloPayload?'Could not refresh rankings. Showing the last loaded snapshot.':'Elo rankings are not available yet. Try Refresh results shortly.';$('eloError').hidden=false;}
+}
+$('eloTab').onclick=()=>view('elo');$('eloSearch').oninput=renderElo;$('eloSort').onchange=renderElo;
+$('eloWeek').onchange=()=>{eloWeek=Number($('eloWeek').value);renderElo();};
+$('eloSeason').onchange=()=>{eloSeason=Number($('eloSeason').value);eloWeek=Math.max(...eloWeeks().map(w=>w.week));renderElo();};
 load();setInterval(()=>{if(!document.hidden)load();},60000);
+
