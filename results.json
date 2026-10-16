@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-15T21:33:00.104785+00:00",
-  "scores_checked_at": "2026-10-15T21:33:00.103570+00:00",
+  "generated_at": "2026-10-16T04:44:53.075085+00:00",
+  "scores_checked_at": "2026-10-16T04:44:53.074200+00:00",
   "weeks": [
     {
       "season": 2026,
@@ -925,9 +925,9 @@
           "away_score": 22,
           "home_score": 17,
           "confidence": 60.4,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 14.0,
+          "actual_home": 17.0,
+          "actual_winner": "DEN"
         },
         {
           "away": "ARI",
