@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-18T16:00:03.609714+00:00",
-  "scores_checked_at": "2026-10-18T16:00:03.608904+00:00",
+  "generated_at": "2026-10-18T20:55:05.867658+00:00",
+  "scores_checked_at": "2026-10-18T20:55:05.865510+00:00",
   "weeks": [
     {
       "season": 2026,
@@ -947,9 +947,9 @@
           "away_score": 22,
           "home_score": 18,
           "confidence": 66.8,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 10.0,
+          "actual_home": 13.0,
+          "actual_winner": "CLE"
         },
         {
           "away": "BUF",
@@ -969,9 +969,9 @@
           "away_score": 32,
           "home_score": 25,
           "confidence": 57.8,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 25.0,
+          "actual_home": 14.0,
+          "actual_winner": "CAR"
         },
         {
           "away": "CHI",
@@ -980,9 +980,9 @@
           "away_score": 25,
           "home_score": 22,
           "confidence": 57.8,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 31.0,
+          "actual_home": 23.0,
+          "actual_winner": "CHI"
         },
         {
           "away": "DAL",
@@ -1002,9 +1002,9 @@
           "away_score": 19,
           "home_score": 25,
           "confidence": 60.4,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 34.0,
+          "actual_home": 31.0,
+          "actual_winner": "HOU"
         },
         {
           "away": "LAC",
@@ -1024,9 +1024,9 @@
           "away_score": 25,
           "home_score": 28,
           "confidence": 57,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 34.0,
+          "actual_home": 27.0,
+          "actual_winner": "NO"
         },
         {
           "away": "NYJ",
@@ -1035,9 +1035,9 @@
           "away_score": 15,
           "home_score": 21,
           "confidence": 69.3,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 19.0,
+          "actual_home": 26.0,
+          "actual_winner": "NE"
         },
         {
           "away": "PIT",
@@ -1046,9 +1046,9 @@
           "away_score": 25,
           "home_score": 21,
           "confidence": 60.8,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 26.0,
+          "actual_home": 19.0,
+          "actual_winner": "PIT"
         },
         {
           "away": "TEN",
@@ -1057,9 +1057,9 @@
           "away_score": 20,
           "home_score": 27,
           "confidence": 69.6,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 26.0,
+          "actual_home": 20.0,
+          "actual_winner": "TEN"
         },
         {
           "away": "WAS",
