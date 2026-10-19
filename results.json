@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-18T20:55:05.867658+00:00",
-  "scores_checked_at": "2026-10-18T20:55:05.865510+00:00",
+  "generated_at": "2026-10-19T04:56:41.166030+00:00",
+  "scores_checked_at": "2026-10-19T04:56:41.165115+00:00",
   "weeks": [
     {
       "season": 2026,
@@ -936,9 +936,9 @@
           "away_score": 26,
           "home_score": 33,
           "confidence": 75.4,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 18.0,
+          "actual_home": 16.0,
+          "actual_winner": "ARI"
         },
         {
           "away": "BAL",
@@ -958,9 +958,9 @@
           "away_score": 35,
           "home_score": 29,
           "confidence": 66.8,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 33.0,
+          "actual_home": 30.0,
+          "actual_winner": "BUF"
         },
         {
           "away": "CAR",
@@ -991,9 +991,9 @@
           "away_score": 22,
           "home_score": 25,
           "confidence": 58.5,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 13.0,
+          "actual_home": 23.0,
+          "actual_winner": "GB"
         },
         {
           "away": "HOU",
@@ -1013,9 +1013,9 @@
           "away_score": 22,
           "home_score": 28,
           "confidence": 72,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 6.0,
+          "actual_home": 22.0,
+          "actual_winner": "KC"
         },
         {
           "away": "NO",
