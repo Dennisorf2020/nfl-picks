@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-19T22:30:03.438907+00:00",
-  "scores_checked_at": "2026-10-19T22:30:03.437993+00:00",
+  "generated_at": "2026-10-20T05:02:08.114646+00:00",
+  "scores_checked_at": "2026-10-20T05:02:08.113710+00:00",
   "weeks": [
     {
       "season": 2026,
@@ -1068,9 +1068,9 @@
           "away_score": 23,
           "home_score": 32,
           "confidence": 71.1,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 17.0,
+          "actual_home": 23.0,
+          "actual_winner": "SF"
         }
       ]
     }
