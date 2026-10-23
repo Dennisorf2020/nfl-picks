@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-23T00:13:16.220372+00:00",
-  "scores_checked_at": "2026-10-22T21:46:37.393380+00:00",
+  "generated_at": "2026-10-23T05:04:41.027599+00:00",
+  "scores_checked_at": "2026-10-23T05:04:41.026743+00:00",
   "weeks": [
     {
       "season": 2026,
@@ -1078,7 +1078,6 @@
       "season": 2026,
       "week": 7,
       "provenance": "generated forecast",
-      "model_data_through_week": 6,
       "captured_at": "2026-10-23T00:13:11.252344+00:00",
       "games": [
         {
@@ -1088,9 +1087,9 @@
           "away_score": 18.0,
           "home_score": 20.0,
           "confidence": 61.4,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 24.0,
+          "actual_home": 30.0,
+          "actual_winner": "CHI"
         },
         {
           "away": "CIN",
@@ -1235,7 +1234,8 @@
           "actual_home": null,
           "actual_winner": ""
         }
-      ]
+      ],
+      "model_data_through_week": 6
     }
   ]
 }
