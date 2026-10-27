@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-26T22:47:03.752385+00:00",
-  "scores_checked_at": "2026-10-26T22:47:03.751105+00:00",
+  "generated_at": "2026-10-27T05:18:18.796290+00:00",
+  "scores_checked_at": "2026-10-27T05:18:18.795426+00:00",
   "weeks": [
     {
       "season": 2026,
@@ -1230,9 +1230,9 @@
           "away_score": 24.0,
           "home_score": 23.0,
           "confidence": 65.1,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 38.0,
+          "actual_home": 21.0,
+          "actual_winner": "DAL"
         }
       ],
       "model_data_through_week": 6
