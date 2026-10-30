@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-29T13:22:48.378887+00:00",
+  "generated_at": "2026-10-30T18:52:40.873163+00:00",
   "scores_checked_at": "2026-10-29T13:22:48.377916+00:00",
   "weeks": [
     {
@@ -1236,6 +1236,169 @@
         }
       ],
       "model_data_through_week": 6
+    },
+    {
+      "season": 2026,
+      "week": 8,
+      "provenance": "retrospective",
+      "model_data_through_week": 7,
+      "captured_at": "2026-10-30T18:52:33.586822+00:00",
+      "games": [
+        {
+          "away": "CAR",
+          "home": "GB",
+          "pick": "GB",
+          "away_score": 22.0,
+          "home_score": 24.0,
+          "confidence": 63.8,
+          "actual_away": null,
+          "actual_home": null,
+          "actual_winner": ""
+        },
+        {
+          "away": "ARI",
+          "home": "DAL",
+          "pick": "DAL",
+          "away_score": 26.0,
+          "home_score": 30.0,
+          "confidence": 68.5,
+          "actual_away": null,
+          "actual_home": null,
+          "actual_winner": ""
+        },
+        {
+          "away": "ATL",
+          "home": "TB",
+          "pick": "ATL",
+          "away_score": 28.0,
+          "home_score": 26.0,
+          "confidence": 54.7,
+          "actual_away": null,
+          "actual_home": null,
+          "actual_winner": ""
+        },
+        {
+          "away": "BAL",
+          "home": "BUF",
+          "pick": "BUF",
+          "away_score": 26.0,
+          "home_score": 31.0,
+          "confidence": 62.7,
+          "actual_away": null,
+          "actual_home": null,
+          "actual_winner": ""
+        },
+        {
+          "away": "CLE",
+          "home": "PIT",
+          "pick": "PIT",
+          "away_score": 16.0,
+          "home_score": 19.0,
+          "confidence": 63.8,
+          "actual_away": null,
+          "actual_home": null,
+          "actual_winner": ""
+        },
+        {
+          "away": "IND",
+          "home": "JAX",
+          "pick": "JAX",
+          "away_score": 22.0,
+          "home_score": 30.0,
+          "confidence": 72.0,
+          "actual_away": null,
+          "actual_home": null,
+          "actual_winner": ""
+        },
+        {
+          "away": "KC",
+          "home": "DEN",
+          "pick": "KC",
+          "away_score": 19.0,
+          "home_score": 17.0,
+          "confidence": 58.1,
+          "actual_away": null,
+          "actual_home": null,
+          "actual_winner": ""
+        },
+        {
+          "away": "LAC",
+          "home": "LAR",
+          "pick": "LAR",
+          "away_score": 20.0,
+          "home_score": 25.0,
+          "confidence": 67.2,
+          "actual_away": null,
+          "actual_home": null,
+          "actual_winner": ""
+        },
+        {
+          "away": "LV",
+          "home": "NYJ",
+          "pick": "LV",
+          "away_score": 27.0,
+          "home_score": 26.0,
+          "confidence": 55.9,
+          "actual_away": null,
+          "actual_home": null,
+          "actual_winner": ""
+        },
+        {
+          "away": "MIN",
+          "home": "DET",
+          "pick": "MIN",
+          "away_score": 17.0,
+          "home_score": 16.0,
+          "confidence": 52.0,
+          "actual_away": null,
+          "actual_home": null,
+          "actual_winner": ""
+        },
+        {
+          "away": "NE",
+          "home": "MIA",
+          "pick": "NE",
+          "away_score": 27.0,
+          "home_score": 20.0,
+          "confidence": 68.9,
+          "actual_away": null,
+          "actual_home": null,
+          "actual_winner": ""
+        },
+        {
+          "away": "PHI",
+          "home": "WAS",
+          "pick": "WAS",
+          "away_score": 27.0,
+          "home_score": 28.0,
+          "confidence": 66.8,
+          "actual_away": null,
+          "actual_home": null,
+          "actual_winner": ""
+        },
+        {
+          "away": "TEN",
+          "home": "CIN",
+          "pick": "CIN",
+          "away_score": 21.0,
+          "home_score": 31.0,
+          "confidence": 74.1,
+          "actual_away": null,
+          "actual_home": null,
+          "actual_winner": ""
+        },
+        {
+          "away": "CHI",
+          "home": "SEA",
+          "pick": "SEA",
+          "away_score": 15.0,
+          "home_score": 17.0,
+          "confidence": 62.4,
+          "actual_away": null,
+          "actual_home": null,
+          "actual_winner": ""
+        }
+      ]
     }
   ]
 }
