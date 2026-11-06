@@ -1,0 +1,48 @@
+name: Refresh scores and deploy dashboard
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  push:
+    branches: [main]
+    paths: ['scripts/refresh_scores.py', '.github/workflows/refresh-scores.yml']
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: public-score-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Refresh final scores
+        run: python scripts/refresh_scores.py
+      - name: Save refreshed archive
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh final scores'
+            git push origin HEAD:main
+          fi
+      - name: Stage public dashboard files
+        run: |
+          mkdir _site
+          cp index.html app.js style.css results.json elo.json .nojekyll _site/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy dashboard
+        id: deployment
+        uses: actions/deploy-pages@v4
