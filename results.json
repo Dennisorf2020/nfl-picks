@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_at": "2026-11-06T01:06:24.692758+00:00",
-  "scores_checked_at": "2026-11-08T15:55:17.835468+00:00",
+  "scores_checked_at": "2026-11-08T20:24:36.645780+00:00",
   "weeks": [
     {
       "season": 2026,
@@ -1582,9 +1582,9 @@
           "away_score": 26.0,
           "home_score": 22.0,
           "confidence": 62.4,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 34.0,
+          "actual_home": 17.0,
+          "actual_winner": "CIN"
         },
         {
           "away": "CLE",
