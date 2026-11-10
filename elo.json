@@ -3420,7 +3420,495 @@
           }
         }
       ]
+    },
+    {
+      "season": 2026,
+      "week": 10,
+      "basis": "entering-week",
+      "generated_at": "2026-11-10T17:32:10.216552+00:00",
+      "teams": [
+        {
+          "team": "ARI",
+          "raw": {
+            "rank": 30,
+            "rating": 1447.2954143560637,
+            "rating_change": -6.766506365195028,
+            "position_change": 0
+          },
+          "network": {
+            "rank": 30,
+            "rating": 1440.1741681837952,
+            "rating_change": -1.4600324243381237,
+            "position_change": 0
+          }
+        },
+        {
+          "team": "ATL",
+          "raw": {
+            "rank": 22,
+            "rating": 1484.0826592728815,
+            "rating_change": -8.894969123788087,
+            "position_change": -2
+          },
+          "network": {
+            "rank": 20,
+            "rating": 1469.9430041055066,
+            "rating_change": -5.981317177264145,
+            "position_change": -1
+          }
+        },
+        {
+          "team": "BAL",
+          "raw": {
+            "rank": 16,
+            "rating": 1518.7793390401832,
+            "rating_change": -8.838193818761738,
+            "position_change": -1
+          },
+          "network": {
+            "rank": 16,
+            "rating": 1497.9198539821177,
+            "rating_change": -3.242525347467563,
+            "position_change": -1
+          }
+        },
+        {
+          "team": "BUF",
+          "raw": {
+            "rank": 1,
+            "rating": 1620.9415817209888,
+            "rating_change": 9.258737841391621,
+            "position_change": 0
+          },
+          "network": {
+            "rank": 1,
+            "rating": 1607.8657231355883,
+            "rating_change": 12.844142691562638,
+            "position_change": 0
+          }
+        },
+        {
+          "team": "CAR",
+          "raw": {
+            "rank": 23,
+            "rating": 1477.8165528689517,
+            "rating_change": -6.60146004267699,
+            "position_change": -1
+          },
+          "network": {
+            "rank": 22,
+            "rating": 1466.3827589307375,
+            "rating_change": -1.5077566174024923,
+            "position_change": 0
+          }
+        },
+        {
+          "team": "CHI",
+          "raw": {
+            "rank": 8,
+            "rating": 1574.6590701187442,
+            "rating_change": 8.065356545638906,
+            "position_change": 1
+          },
+          "network": {
+            "rank": 8,
+            "rating": 1557.4943521711195,
+            "rating_change": 8.031312768858015,
+            "position_change": 1
+          }
+        },
+        {
+          "team": "CIN",
+          "raw": {
+            "rank": 14,
+            "rating": 1540.4227277165855,
+            "rating_change": 8.894969123788087,
+            "position_change": 0
+          },
+          "network": {
+            "rank": 14,
+            "rating": 1519.1294941704664,
+            "rating_change": 10.210310210268744,
+            "position_change": 0
+          }
+        },
+        {
+          "team": "CLE",
+          "raw": {
+            "rank": 21,
+            "rating": 1486.8025528782925,
+            "rating_change": -11.051653033107641,
+            "position_change": -2
+          },
+          "network": {
+            "rank": 23,
+            "rating": 1462.630839693875,
+            "rating_change": -10.38221069827614,
+            "position_change": -3
+          }
+        },
+        {
+          "team": "DAL",
+          "raw": {
+            "rank": 18,
+            "rating": 1498.394733339031,
+            "rating_change": 9.449825161019362,
+            "position_change": 3
+          },
+          "network": {
+            "rank": 18,
+            "rating": 1477.4463009972187,
+            "rating_change": 10.10996592058018,
+            "position_change": 5
+          }
+        },
+        {
+          "team": "DEN",
+          "raw": {
+            "rank": 2,
+            "rating": 1613.9864636832754,
+            "rating_change": 6.60146004267699,
+            "position_change": 0
+          },
+          "network": {
+            "rank": 2,
+            "rating": 1601.1675668378118,
+            "rating_change": 7.700927508696168,
+            "position_change": 0
+          }
+        },
+        {
+          "team": "DET",
+          "raw": {
+            "rank": 4,
+            "rating": 1582.4438372375644,
+            "rating_change": 6.840000680372896,
+            "position_change": 1
+          },
+          "network": {
+            "rank": 6,
+            "rating": 1561.0037181945531,
+            "rating_change": 7.412781666746696,
+            "position_change": 0
+          }
+        },
+        {
+          "team": "GB",
+          "raw": {
+            "rank": 10,
+            "rating": 1562.3580528969867,
+            "rating_change": 10.291408283056171,
+            "position_change": 1
+          },
+          "network": {
+            "rank": 12,
+            "rating": 1541.9823314537466,
+            "rating_change": 13.846539000523762,
+            "position_change": 1
+          }
+        },
+        {
+          "team": "HOU",
+          "raw": {
+            "rank": 15,
+            "rating": 1533.2378415716028,
+            "rating_change": 8.771412099262307,
+            "position_change": 1
+          },
+          "network": {
+            "rank": 15,
+            "rating": 1512.4439223663585,
+            "rating_change": 11.43957285881811,
+            "position_change": 1
+          }
+        },
+        {
+          "team": "IND",
+          "raw": {
+            "rank": 27,
+            "rating": 1460.3607296017708,
+            "rating_change": -9.449825161019362,
+            "position_change": -1
+          },
+          "network": {
+            "rank": 27,
+            "rating": 1445.5288023866426,
+            "rating_change": -8.194583531756734,
+            "position_change": -2
+          }
+        },
+        {
+          "team": "JAX",
+          "raw": {
+            "rank": 6,
+            "rating": 1577.0041089522288,
+            "rating_change": 8.838193818761738,
+            "position_change": 2
+          },
+          "network": {
+            "rank": 7,
+            "rating": 1560.923187056084,
+            "rating_change": 9.827949838245786,
+            "position_change": 0
+          }
+        },
+        {
+          "team": "KC",
+          "raw": {
+            "rank": 12,
+            "rating": 1554.186036356162,
+            "rating_change": 6.573717235979757,
+            "position_change": 1
+          },
+          "network": {
+            "rank": 13,
+            "rating": 1535.5195106312544,
+            "rating_change": 4.38800613499825,
+            "position_change": -1
+          }
+        },
+        {
+          "team": "LAC",
+          "raw": {
+            "rank": 25,
+            "rating": 1472.7927663413536,
+            "rating_change": -8.771412099262307,
+            "position_change": -1
+          },
+          "network": {
+            "rank": 24,
+            "rating": 1462.51797348194,
+            "rating_change": -6.3191227027616605,
+            "position_change": -3
+          }
+        },
+        {
+          "team": "LAR",
+          "raw": {
+            "rank": 11,
+            "rating": 1559.6775490676464,
+            "rating_change": 8.069902364454038,
+            "position_change": 1
+          },
+          "network": {
+            "rank": 11,
+            "rating": 1543.3581121528855,
+            "rating_change": 8.742669780570395,
+            "position_change": 0
+          }
+        },
+        {
+          "team": "LV",
+          "raw": {
+            "rank": 29,
+            "rating": 1454.2000162602228,
+            "rating_change": -6.49443958534539,
+            "position_change": 0
+          },
+          "network": {
+            "rank": 29,
+            "rating": 1440.7303474059493,
+            "rating_change": -1.3440775261117324,
+            "position_change": 0
+          }
+        },
+        {
+          "team": "MIA",
+          "raw": {
+            "rank": 28,
+            "rating": 1455.0839471145746,
+            "rating_change": -6.840000680372896,
+            "position_change": -1
+          },
+          "network": {
+            "rank": 28,
+            "rating": 1444.1627516791614,
+            "rating_change": -3.1372969350418316,
+            "position_change": -1
+          }
+        },
+        {
+          "team": "MIN",
+          "raw": {
+            "rank": 7,
+            "rating": 1576.6226944146028,
+            "rating_change": -9.258737841391621,
+            "position_change": -3
+          },
+          "network": {
+            "rank": 5,
+            "rating": 1561.1832939219814,
+            "rating_change": -2.2385758542284293,
+            "position_change": -1
+          }
+        },
+        {
+          "team": "NE",
+          "raw": {
+            "rank": 13,
+            "rating": 1551.90266442168,
+            "rating_change": -10.291408283056171,
+            "position_change": -3
+          },
+          "network": {
+            "rank": 10,
+            "rating": 1543.6317927657337,
+            "rating_change": -6.960159002205046,
+            "position_change": -2
+          }
+        },
+        {
+          "team": "NO",
+          "raw": {
+            "rank": 26,
+            "rating": 1472.23208834077,
+            "rating_change": 11.051653033107641,
+            "position_change": 2
+          },
+          "network": {
+            "rank": 26,
+            "rating": 1454.7287385805473,
+            "rating_change": 10.998211118833296,
+            "position_change": 2
+          }
+        },
+        {
+          "team": "NYG",
+          "raw": {
+            "rank": 19,
+            "rating": 1491.2716834976065,
+            "rating_change": 10.973850338521743,
+            "position_change": 6
+          },
+          "network": {
+            "rank": 21,
+            "rating": 1466.6790736345931,
+            "rating_change": 15.201332692630785,
+            "position_change": 5
+          }
+        },
+        {
+          "team": "NYJ",
+          "raw": {
+            "rank": 31,
+            "rating": 1416.9806938303038,
+            "rating_change": -6.573717235979757,
+            "position_change": 0
+          },
+          "network": {
+            "rank": 31,
+            "rating": 1400.3841668418734,
+            "rating_change": -2.963538070597224,
+            "position_change": 0
+          }
+        },
+        {
+          "team": "PHI",
+          "raw": {
+            "rank": 17,
+            "rating": 1503.2665839248807,
+            "rating_change": -10.973850338521743,
+            "position_change": 0
+          },
+          "network": {
+            "rank": 17,
+            "rating": 1482.8435982670162,
+            "rating_change": -8.804320990927636,
+            "position_change": 0
+          }
+        },
+        {
+          "team": "PIT",
+          "raw": {
+            "rank": 9,
+            "rating": 1572.6324107710989,
+            "rating_change": 0.0,
+            "position_change": -3
+          },
+          "network": {
+            "rank": 9,
+            "rating": 1547.6968130213904,
+            "rating_change": 0.8530647001625766,
+            "position_change": 1
+          }
+        },
+        {
+          "team": "SEA",
+          "raw": {
+            "rank": 5,
+            "rating": 1577.3524343385714,
+            "rating_change": 6.766506365195028,
+            "position_change": 2
+          },
+          "network": {
+            "rank": 4,
+            "rating": 1568.8914186107456,
+            "rating_change": 5.712490608663984,
+            "position_change": 1
+          }
+        },
+        {
+          "team": "SF",
+          "raw": {
+            "rank": 3,
+            "rating": 1594.3772669791088,
+            "rating_change": 6.49443958534539,
+            "position_change": 0
+          },
+          "network": {
+            "rank": 3,
+            "rating": 1576.5208132833245,
+            "rating_change": 6.109218677796889,
+            "position_change": 0
+          }
+        },
+        {
+          "team": "TB",
+          "raw": {
+            "rank": 20,
+            "rating": 1490.4540058164946,
+            "rating_change": -8.065356545638906,
+            "position_change": -2
+          },
+          "network": {
+            "rank": 19,
+            "rating": 1476.2698374330278,
+            "rating_change": -4.2539112014096645,
+            "position_change": -1
+          }
+        },
+        {
+          "team": "TEN",
+          "raw": {
+            "rank": 32,
+            "rating": 1401.5621052759066,
+            "rating_change": 0.0,
+            "position_change": 0
+          },
+          "network": {
+            "rank": 32,
+            "rating": 1377.6479899074038,
+            "rating_change": 1.669243335765259,
+            "position_change": 0
+          }
+        },
+        {
+          "team": "WAS",
+          "raw": {
+            "rank": 24,
+            "rating": 1475.6274573011895,
+            "rating_change": -8.069902364454038,
+            "position_change": -1
+          },
+          "network": {
+            "rank": 25,
+            "rating": 1461.6752319439813,
+            "rating_change": -4.1592579707762525,
+            "position_change": -1
+          }
+        }
+      ]
     }
   ],
-  "generated_at": "2026-11-06T01:06:26.253276+00:00"
+  "generated_at": "2026-11-10T17:32:12.461040+00:00"
 }
