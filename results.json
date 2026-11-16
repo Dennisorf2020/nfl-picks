@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_at": "2026-11-10T17:32:10.752396+00:00",
-  "scores_checked_at": "2026-11-16T03:03:51.835865+00:00",
+  "scores_checked_at": "2026-11-16T11:00:47.100385+00:00",
   "weeks": [
     {
       "season": 2026,
@@ -1844,9 +1844,9 @@
           "away_score": 25.0,
           "home_score": 27.0,
           "confidence": 64.4,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 18.0,
+          "actual_home": 38.0,
+          "actual_winner": "CIN"
         },
         {
           "away": "SEA",
