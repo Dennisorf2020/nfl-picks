@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_at": "2026-11-10T17:32:10.752396+00:00",
-  "scores_checked_at": "2026-11-15T23:34:30.480870+00:00",
+  "scores_checked_at": "2026-11-16T03:03:51.835865+00:00",
   "weeks": [
     {
       "season": 2026,
@@ -1800,9 +1800,9 @@
           "away_score": 27.0,
           "home_score": 23.0,
           "confidence": 73.3,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 34.0,
+          "actual_home": 6.0,
+          "actual_winner": "LAR"
         },
         {
           "away": "MIA",
@@ -1855,9 +1855,9 @@
           "away_score": 26.0,
           "home_score": 19.0,
           "confidence": 64.8,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 21.0,
+          "actual_home": 13.0,
+          "actual_winner": "SEA"
         },
         {
           "away": "SF",
@@ -1866,9 +1866,9 @@
           "away_score": 28.0,
           "home_score": 23.0,
           "confidence": 66.8,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 46.0,
+          "actual_home": 40.0,
+          "actual_winner": "SF"
         },
         {
           "away": "LAC",
