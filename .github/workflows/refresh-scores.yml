@@ -5,7 +5,7 @@ on:
     - cron: '7,22,37,52 * * * *'
   push:
     branches: [main]
-    paths: ['scripts/refresh_scores.py', '.github/workflows/refresh-scores.yml']
+    paths: ['scripts/refresh_scores.py', 'scripts/build_tracker.py', 'results.json', '.github/workflows/refresh-scores.yml']
 permissions:
   contents: write
   pages: write
@@ -40,6 +40,8 @@ jobs:
         run: |
           mkdir _site
           cp index.html app.js style.css results.json elo.json .nojekyll _site/
+      - name: Build static prediction tracker feeds
+        run: python scripts/build_tracker.py --source results.json --output _site/tracker
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
