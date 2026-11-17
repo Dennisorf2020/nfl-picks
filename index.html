@@ -16,7 +16,11 @@
 <section id="picksView"><div class="section-heading"><div><p class="eyebrow" id="weekEyebrow">THE MATCHUPS</p><h2 id="weekHeading">Weekly picks</h2></div><div class="selectors"><label>Season<select id="season"></select></label><label>Week<select id="week"></select></label></div></div>
 <div class="week-summary"><span id="weekSource"></span><b id="weekRecord"></b></div><p class="note" id="provenanceNote"></p>
 <div class="toolbar"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search a team…" aria-label="Search teams"></label><label class="filter-label">Show<select id="outcome"><option value="all">All results</option><option value="win">Correct picks</option><option value="loss">Missed picks</option><option value="pending">Pending</option></select></label><button id="download" class="quiet">Download picks ↓</button></div>
-<div id="matchups" class="matchups" aria-live="polite"></div><p id="empty" class="empty" hidden>No matchups match your filters.</p></section>
+<div id="matchups" class="matchups" aria-live="polite">
+<!-- BEGIN STATIC WEEKLY PREDICTIONS -->
+<p>Latest weekly predictions are available when the publishing workflow runs.</p>
+<!-- END STATIC WEEKLY PREDICTIONS -->
+</div><p id="empty" class="empty" hidden>No matchups match your filters.</p></section>
 <section id="recordView" hidden><div class="section-heading"><div><p class="eyebrow">THE FULL PICTURE</p><h2>Season record</h2></div></div><p class="note">Weekly records for published predictions. Pick history is shown for each week.</p><div class="table-wrap"><table><thead><tr><th>Week</th><th>Record</th><th>Hit rate</th><th>Pending</th><th>Pick history</th></tr></thead><tbody id="recordRows"></tbody></table></div></section>
 <section id="eloView" hidden>
 <div class="section-heading"><div><p class="eyebrow">ALL 32 TEAMS / ENTERING-WEEK RATINGS</p><h2 id="eloHeading">Elo rankings</h2></div><div class="selectors"><label>Season<select id="eloSeason"></select></label><label>Entering week<select id="eloWeek"></select></label></div></div>
