@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_at": "2026-11-17T14:10:48.167699+00:00",
-  "scores_checked_at": "2026-11-22T21:00:18.601561+00:00",
+  "scores_checked_at": "2026-11-23T01:34:26.046483+00:00",
   "weeks": [
     {
       "season": 2026,
@@ -1919,9 +1919,9 @@
           "away_score": 24.0,
           "home_score": 29.0,
           "confidence": 62.5,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 33.0,
+          "actual_home": 35.0,
+          "actual_winner": "CAR"
         },
         {
           "away": "JAX",
@@ -1930,9 +1930,9 @@
           "away_score": 20.0,
           "home_score": 14.0,
           "confidence": 68.7,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 18.0,
+          "actual_home": 23.0,
+          "actual_winner": "NYG"
         },
         {
           "away": "LV",
@@ -1941,9 +1941,9 @@
           "away_score": 21.0,
           "home_score": 29.0,
           "confidence": 74.5,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 24.0,
+          "actual_home": 38.0,
+          "actual_winner": "DEN"
         },
         {
           "away": "MIA",
@@ -1952,9 +1952,9 @@
           "away_score": 22.0,
           "home_score": 35.0,
           "confidence": 78.3,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 9.0,
+          "actual_home": 26.0,
+          "actual_winner": "BUF"
         },
         {
           "away": "MIN",
@@ -1974,9 +1974,9 @@
           "away_score": 21.0,
           "home_score": 30.0,
           "confidence": 75.8,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 13.0,
+          "actual_home": 21.0,
+          "actual_winner": "CHI"
         },
         {
           "away": "NYJ",
@@ -1985,9 +1985,9 @@
           "away_score": 21.0,
           "home_score": 19.0,
           "confidence": 54.3,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 27.0,
+          "actual_home": 24.0,
+          "actual_winner": "NYJ"
         },
         {
           "away": "PIT",
@@ -1996,9 +1996,9 @@
           "away_score": 23.0,
           "home_score": 17.0,
           "confidence": 66.8,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 16.0,
+          "actual_home": 19.0,
+          "actual_winner": "PHI"
         },
         {
           "away": "TB",
@@ -2007,9 +2007,9 @@
           "away_score": 21.0,
           "home_score": 27.0,
           "confidence": 69.0,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 21.0,
+          "actual_home": 31.0,
+          "actual_winner": "DET"
         },
         {
           "away": "TEN",
@@ -2018,9 +2018,9 @@
           "away_score": 28.0,
           "home_score": 36.0,
           "confidence": 72.8,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": ""
+          "actual_away": 30.0,
+          "actual_home": 51.0,
+          "actual_winner": "DAL"
         },
         {
           "away": "CIN",
