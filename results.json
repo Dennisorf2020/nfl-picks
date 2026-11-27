@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_at": "2026-11-25T17:14:19.899618+00:00",
-  "scores_checked_at": "2026-11-26T20:29:44.550957+00:00",
+  "scores_checked_at": "2026-11-27T03:13:38.255663+00:00",
   "weeks": [
     {
       "season": 2026,
@@ -2062,9 +2062,9 @@
           "away_score": 20.0,
           "home_score": 21.0,
           "confidence": 57.6,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": "",
+          "actual_away": 39.0,
+          "actual_home": 35.0,
+          "actual_winner": "CHI",
           "pregame_eligible": true,
           "kickoff_at": "2026-11-26T18:00:00+00:00"
         },
@@ -2088,9 +2088,9 @@
           "away_score": 29.0,
           "home_score": 43.0,
           "confidence": 73.5,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": "",
+          "actual_away": 39.0,
+          "actual_home": 38.0,
+          "actual_winner": "PHI",
           "pregame_eligible": true,
           "kickoff_at": "2026-11-26T21:30:00+00:00"
         },
