@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated_at": "2026-11-25T17:14:19.899618+00:00",
-  "scores_checked_at": "2026-11-27T21:41:35.737567+00:00",
+  "scores_checked_at": "2026-11-28T03:35:15.170592+00:00",
   "weeks": [
     {
       "season": 2026,
@@ -2101,9 +2101,9 @@
           "away_score": 21.0,
           "home_score": 17.0,
           "confidence": 66.1,
-          "actual_away": null,
-          "actual_home": null,
-          "actual_winner": "",
+          "actual_away": 5.0,
+          "actual_home": 27.0,
+          "actual_winner": "PIT",
           "pregame_eligible": true,
           "kickoff_at": "2026-11-27T20:00:00+00:00"
         },
